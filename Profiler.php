@@ -152,7 +152,7 @@ class Profiler
             throw new LogicException(sprintf('No %s profile', $namespace));
         }
 
-        $runId = date('YmdTHms');
+        $runId = date('YmdHms');
         $runs  = new XHProfRuns_Default();
 
         $runs->save_run($this->dataset[$namespace], $namespace, $runId);
